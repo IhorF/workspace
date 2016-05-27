@@ -1,0 +1,38 @@
+package Deposit;
+
+import java.util.Scanner;
+
+public class Dividends {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("—к≥льки ¬ам рок≥в?");
+		int year = sc.nextInt();
+		System.out.println("¬ ск≥льки рок≥в плануЇте вийти на пенс≥ю?");
+		int end = sc.nextInt();
+		System.out.println("яку суму ¬и можете в≥дкласти в р≥к?");
+		double money = sc.nextDouble();
+		sc.close();
+		
+	
+		arrayDividends(arrayInitialize(year, end), money, 19);
+	}
+
+	static double [] arrayInitialize (int year, int end) {
+		 double arr[]=new double[end-year];
+		 return arr;
+		}
+		
+static void arrayDividends(double arr[], double money,int rate){
+	//double cash=1;
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(double)(rate/100);
+			arr[i]=money*(1+rate/100);
+			System.out.println(money);
+			money=arr[i];
+			System.out.println(arr[i]);
+		}
+		
+		
+	}
+}
