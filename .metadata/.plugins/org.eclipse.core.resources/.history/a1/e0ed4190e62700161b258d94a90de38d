@@ -1,0 +1,35 @@
+package Lessons;
+
+public class JavaCore1 {
+
+	public static void main(String[] args) {
+		String str1 = "стрічка";
+		String str2 = "стрічка";
+		String str3 = new String("стрічка");
+		boolean d=true;
+		str3=new Boolean(d).toString();
+		System.out.println(str1 == str2);
+		System.out.println(str1 == str3);
+		System.out.println(str1.equals(str3));
+		System.out.println(str1 + " string");
+		System.out.println(Long.MAX_VALUE);
+		System.out.println(str1.charAt(0));
+		System.out.println(str1.codePointAt(0));
+		System.out.println(str1.compareTo(str2));
+		System.out.println(str1.concat(str2));
+		System.out.println(str1.contains("рі"));
+		str2.endsWith("ка");
+	
+		System.out.println("cat".compareTo("Hat"));
+		System.out.println(str1.length());
+	
+}
+	static public int myCompareTo(String str1, String str2){
+		int c=0;
+		
+		
+		
+		
+		return c;
+	}
+}

@@ -1,0 +1,33 @@
+package Lessons;
+
+public class Person {
+
+	int age;
+	String name;
+	Person(){}
+	
+	Person(int age, String name){
+		System.out.println("age = "+ this.age+"Name = "+this.name);
+		this.age=age;
+		System.out.println("age = "+ this.age+"Name = "+this.name);
+		this.name=name;
+		System.out.println("age = "+ this.age+"Name = "+this.name);
+	}
+
+	
+	void talk(){
+		System.out.println("Bla bla");
+	}
+	
+	
+	public static void main(String[] args) {
+		Person p=new Person();
+		p.talk();
+		p.age=18;
+		System.out.println("age = "+p.age);
+		p.name="Petro";
+		System.out.println("Name = "+p.name);
+
+	}
+
+}

@@ -21,49 +21,30 @@ public class HresticNolik {
 		sc.close();
 	}
 
-	/*
-	 * static boolean isSomeOneWin(int[][] battle) { if (battle[0][0] > 0 &&
-	 * battle[0][1] > 0 && battle[0][2] > 0) { return false; } else if
-	 * (battle[1][0] > 1 && battle[1][1] > 1 && battle[1][2] > 1) { return
-	 * false; } else if (battle[2][0] > 1 && battle[2][1] > 1 && battle[2][2] >
-	 * 1) { return false; } else if (battle[0][0] > 1 && battle[1][0] > 1 &&
-	 * battle[2][0] > 1) { return false; } else if (battle[0][1] > 1 &&
-	 * battle[1][1] > 1 && battle[2][1] > 1) { return false; } else if
-	 * (battle[0][2] > 1 && battle[1][2] > 1 && battle[2][2] > 1) { return
-	 * false; } else if (battle[0][0] > 1 && battle[1][1] > 1 && battle[2][2] >
-	 * 1) { return false; } else if (battle[2][0] > 1 && battle[1][1] > 1 &&
-	 * battle[0][2] > 1) { return false; } return isAllFieldFull(battle); }
-	 */
-
 	static boolean isAllFieldFull(int[][] battle) {
-		int k;
-		int h;
+		int f;
 		for (int i = 0; i < battle.length; i++) {
-			k = 0;
+			f = 0;
 			for (int j = 0; j < battle[i].length; j++) {
-				if (battle[i][j] == 2) {
-					k++;
-					if (k == 3) return false;
-				}
+				if (battle[j][j] == 2){
+					f++;
+				}else if (battle[i][j] == 2) {
+					f++;
+				} else if (battle[j][i] == 2) {
+					f++;
+				} else if (battle[2][0] > 0 && battle[1][1] > 0 && battle[0][2] > 0)
+					return false;
 			}
+			if (f == 3)
+				return false;
 		}
-		for (int j = 0; j < battle.length; j++) {
-			h = 0;
-			for (int i = 0; i < battle[j].length; i++) {
-				if (battle[i][j] == 2) {
-					h++;
-					if (h == 3) return false;
-				}
-			}
-		}
-
 		return true;
 	}
 
 	static void userShot(int[][] battle, Scanner sc) {
 		System.out.println("Enter from 1 to 3 by x coordinate");
 		int y = read(sc) - 1;
-		System.out.println("Enter from 1 to 3 by y coordinate");
+		System.out.println("Enter from 1 to 3 by y coordinate"); 
 		int x = read(sc) - 1;
 		battle[x][y] = 2;
 	}

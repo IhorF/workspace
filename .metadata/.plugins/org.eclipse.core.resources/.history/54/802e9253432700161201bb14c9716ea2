@@ -1,0 +1,29 @@
+package Lessons;
+
+public class Person {
+
+	int age;
+	String name;
+	
+	/*Person(int age, String name){
+		this.age=age;
+		this.name=name;
+	}*/
+
+	
+	void talk(){
+		System.out.println("Bla bla");
+	}
+	
+	
+	public static void main(String[] args) {
+		Person p=new Person();
+		p.talk();
+		p.age=18;
+		System.out.println("age= "+p.age);
+		p.name="Petro";
+		System.out.println("Name= "+p.name);
+
+	}
+
+}
