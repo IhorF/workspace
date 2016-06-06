@@ -1,0 +1,18 @@
+package Lessons;
+
+public class Human {
+	
+	int age;
+	
+	
+	void walk(){
+		System.out.println("go go go");
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

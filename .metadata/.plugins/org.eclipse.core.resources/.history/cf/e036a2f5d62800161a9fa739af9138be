@@ -1,0 +1,34 @@
+package Lessons;
+
+
+
+public class Hunter extends Human{
+	private int killedMammonts;
+	
+
+	
+	public Hunter(int age, int killedMammonts){
+		super(age);
+		setKilledMammonts(killedMammonts);
+	}
+	
+	
+	void eatMeat(String meat){
+		System.out.println("nyam-nyam "+meat);
+	}
+	void killMammont(){
+		killedMammonts++;
+		eatMeat("mammonts meat ");
+	}
+	
+	
+	public int getKilledMammonts(){
+		return killedMammonts;
+	}
+	
+	public void setKilledMammonts(int killedMammonts){
+		killedMammonts = killedMammonts > 0 ? killedMammonts : 1;
+		this.killedMammonts=killedMammonts;
+	}
+	
+}

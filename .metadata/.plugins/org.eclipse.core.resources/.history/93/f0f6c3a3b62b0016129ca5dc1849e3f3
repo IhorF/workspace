@@ -1,0 +1,20 @@
+package Robot;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Robot robot = new Robot();
+		CoffeRobot coffeRobot = new CoffeRobot();
+		RobotDancer robotDancer=new RobotDancer();
+		RobotCoocker robotCoocker=new RobotCoocker();
+		
+		robot.work();
+		coffeRobot.work();
+		robotDancer.work();
+		robotCoocker.work();
+		
+		
+		System.out.println("Площа круга з радіусом 10 = "+MyMath.ploshchaKruha(2));
+	}
+
+}

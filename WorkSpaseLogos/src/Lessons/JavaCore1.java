@@ -4,8 +4,8 @@ public class JavaCore1 {
 
 	public static void main(String[] args) {
 
-		System.out.println("Hello+R+".compareTo("Hello+RRR"));
-		System.out.println(myCompareTo("Hello+R+", "Hello+RRR"));
+		System.out.println("Hello+R+11101".compareTo("Hello+R+111012"));
+		System.out.println(myCompareTo("Hello+R+11101", "Hello+R+111012"));
 	}
 
 	static public int myCompareTo(String str1, String str2) {

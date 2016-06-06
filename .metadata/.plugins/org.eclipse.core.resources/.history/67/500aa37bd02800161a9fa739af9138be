@@ -1,0 +1,16 @@
+package Lessons;
+
+
+
+public class Hunter extends Human{
+	int killedMammonts;
+	
+	void eatMeat(String meat){
+		System.out.println("nyam-nyam "+meat);
+	}
+	void killMammont(){
+		killedMammonts++;
+		eatMeat("mammonts meat ");
+	}
+	
+}
